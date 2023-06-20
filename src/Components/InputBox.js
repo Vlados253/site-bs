@@ -1,0 +1,53 @@
+import React from 'react';
+import { Container, Form, Button } from 'react-bootstrap';
+import styled from 'styled-components';
+
+const Styles = styled.div `
+p{
+    margin: 0;
+}
+`
+
+function InputBox(){
+    return(
+        <>
+        <Styles>
+            <Container>
+                
+                <h5 className='mt-5'>Сотрудничество</h5>
+                <p className='mt-2'>Хотите представлять наши интересы в качестве дилера или сервисного центра?</p>
+                <p>Заполните информацию о Вашей организации и наши сотрудники свяжутся с вами в ближайшее время.</p>
+            
+                <Form className="col-lg-7 col-md-12 my-4">
+                    <Form.Group className="mb-3">
+                        <Form.Control type="text" placeholder="Наименование компании (обязательно)" />
+                    </Form.Group>
+                    <Form.Group className="mb-3">
+                        <Form.Control type="text" placeholder="Контактное лицо (обязательно)" />
+                    </Form.Group>
+                    <Form.Group className="mb-3">
+                        <Form.Control type="text" placeholder="Телефон (обязательно)" />
+                    </Form.Group>
+                    <Form.Group className="mb-4">
+                        <Form.Control type="email" placeholder="Ваш email (обязательно)" />
+                    </Form.Group>
+                    <Form.Select className="mb-3">
+                        <option>Стать дилером и сервисным центром</option>
+                        <option>Стать сервисным центром</option>
+                        <option>Стать дилером</option>
+                    </Form.Select>
+                    <Form.Group className="mb-3">
+                        <Form.Control as="textarea" placeholder='Сообщение' rows={3} />
+                    </Form.Group>
+                    <Button variant="primary" type="submit">
+                        Отправить
+                    </Button>
+                </Form>
+            
+            </Container>
+        </Styles>
+        </>
+    )
+}
+
+export default InputBox;
