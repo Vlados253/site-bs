@@ -15,7 +15,7 @@ function HomeServices() {
                     <p>- Большое количество профессий в соответствии с учебными программами</p>
                     <p>- По окончанию обучения выдается свидетельство о присвоении профессии, повышения квалификации</p>
                     <p>- Обучение может осуществляться как на базе Учебного центра, так и на базе заказчика</p>
-                    <Button variant="primary">Перейти на сайт центра</Button>
+                    <a href="https://ovidiy.by/"><Button variant="primary">Перейти на сайт центра</Button></a>
                 </div>
                 <h5>Аренда</h5>
                 <div className="my-4 d-flex flex-wrap" style={{"justify-content":"space-between"}}>

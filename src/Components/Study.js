@@ -8,7 +8,7 @@ function Study(){
         <Container>
             <h4 className="mb-4">Обучение</h4>
             <p>На базе Машиностроительной компании “Витебские подъемники” создан учебный центр “Овидий”</p>
-            <Button variant="primary" className="mb-4">Перейти на сайт</Button>
+            <a href="https://ovidiy.by/"><Button variant="primary" className="mb-4">Перейти на сайт</Button></a>
             <img 
                 src={StudyImg}
                 alt="Фон"
