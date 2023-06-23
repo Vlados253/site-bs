@@ -137,12 +137,6 @@ function ListProducts(){
 
             </div>
 
-
-            
-            
-
-            
-
         </Container>
         </>
     )
