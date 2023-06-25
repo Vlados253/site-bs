@@ -65,7 +65,7 @@ function Footer() {
                 </Form.Group>
                 <Form.Group className="mb-3">
                     <Form.Label>Телефон</Form.Label>
-                    <Form.Control type="text" placeholder="375291112233" name="phone_from" pattern="375[2-9]{2}[0-9]{7}" required/>
+                    <Form.Control type="text" placeholder="+375291112233" name="phone_from" pattern="+375[2-9]{2}[0-9]{7}" required/>
                 </Form.Group>
                 <Form.Group className="mb-3">
                     <Form.Label>Сообщение</Form.Label>
