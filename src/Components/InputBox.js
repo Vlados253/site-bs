@@ -35,7 +35,7 @@ function InputBox(){
                         <Form.Control type="text" placeholder="Контактное лицо (обязательно)" name="from_name" required />
                     </Form.Group>
                     <Form.Group className="mb-3">
-                        <Form.Control type="text" placeholder="Телефон (обязательно)" pattern="+375[2-9]{2}[0-9]{7}" name="phone_from" required />
+                        <Form.Control type="text" placeholder="Телефон (обязательно)" pattern="375[2-9]{2}[0-9]{7}" name="phone_from" required />
                     </Form.Group>
                     <Form.Group className="mb-4">
                         <Form.Control type="email" placeholder="Ваш email (обязательно)" name="email_from" required />
