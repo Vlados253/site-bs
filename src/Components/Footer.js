@@ -2,8 +2,8 @@ import React from "react";
 import { Container, Button, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import emailjs from '@emailjs/browser'
 import Logotip from '../img/FooterLogotip.png';
-import Instagram from '../img/Instagram.png';
 import YouTube from '../img/YouTube.png';
 
 const Styles = styled.div `
@@ -38,10 +38,18 @@ color: white;
 `
 
 function Footer() {
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm('service_uvqgbhw', 'template_23mwrqr', e.target, '1iPx9dJCrZ_7QRPBI')
+        e.target.reset()
+    }
+
   return (
     <Styles>
         <Container className="py-5 d-flex flex-wrap" style={{"align-items":"center", "justify-content":"space-between"}}>
-            <Form className="col-lg-6 col-md-12">
+            <Form className="col-lg-6 col-md-12" onSubmit={sendEmail}>
                 <h5>Заказать обратный звонок</h5>
                 <p style={{"color":"lightgray", "line-height":"1.1"}}>
                     Остались вопросы по спецтехнике ВИПО?
@@ -49,19 +57,19 @@ function Footer() {
                 </p>
                 <Form.Group className="mb-3">
                     <Form.Label>Имя</Form.Label>
-                    <Form.Control type="text" placeholder="Enter name" />
+                    <Form.Control type="text" placeholder="example" name="from_name" required/>
                 </Form.Group>
                 <Form.Group className="mb-3">
                     <Form.Label>Электронная почта</Form.Label>
-                    <Form.Control type="email" placeholder="Enter email" />
+                    <Form.Control type="email" placeholder="example@gmail.com" name="email_from" required/>
                 </Form.Group>
                 <Form.Group className="mb-3">
                     <Form.Label>Телефон</Form.Label>
-                    <Form.Control type="text" placeholder="Enter number" />
+                    <Form.Control type="text" placeholder="375291112233" name="phone_from" pattern="375[2-9]{2}[0-9]{7}" required/>
                 </Form.Group>
                 <Form.Group className="mb-3">
                     <Form.Label>Сообщение</Form.Label>
-                    <Form.Control as="textarea" placeholder='Enter message' rows={3} />
+                    <Form.Control as="textarea" placeholder='Enter message' rows={3} name="message" required/>
                 </Form.Group>
                 <Button variant="primary" type="submit">
                     Отправить
@@ -83,18 +91,12 @@ function Footer() {
                 <p className="mb-4">vipo@agpvipo.com</p>
                 <h5>Мы в социальных сетях</h5>
                 <div className="d-flex" style={{"background-color":"white"}}>
-                    <img 
-                        src={Instagram}
-                        alt="Insta"
-                        style={{"height":"30px", "width":"auto"}}
-                        className="insta"
-                    />
-                    <img
+                    <a href="https://www.youtube.com/channel/UCYoqgbvByG80h0x04ofIkLQ"><img
                         src={YouTube}
                         alt="YouTube"
                         style={{"height":"30px", "width":"auto"}}
                         className="youtube"
-                    />
+                    /></a>
                 </div>
             </div>
         </Container>
